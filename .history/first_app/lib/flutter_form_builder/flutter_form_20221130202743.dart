@@ -104,9 +104,9 @@ class _FormBuilderScreenState extends State<FormBuilderScreen> {
                             context,
                             MaterialPageRoute(
                                 builder: (context) => homescreen(
-                                      userName: userName!,
+                                      username: userName!,
                                       password: password!,
-                                      genderSelected: genderSelected!,
+                                      gender: genderSelected!,
                                     )));
                         formKey.currentState!.fields['User Name']!.reset();
                         formKey.currentState!.fields['Password']!.reset();

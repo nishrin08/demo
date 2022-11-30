@@ -1,18 +1,12 @@
 import 'package:flutter/material.dart';
 
-import 'models/home_model.dart';
 
 // ignore: camel_case_types
 class homescreen extends StatefulWidget {
-  String? userName;
-  String? password;
-  String? genderSelected;
-  homescreen(
-      {super.key,
-      required this.userName,
-      required this.password,
-      required this.genderSelected});
-
+   homescreen({required this.userName,required this.password,required this.genderSelected,});
+   String userName;
+   String password;
+   String genderSelected;
   @override
   State<homescreen> createState() => _homescreenState();
 }
@@ -20,7 +14,6 @@ class homescreen extends StatefulWidget {
 // ignore: camel_case_types
 class _homescreenState extends State<homescreen> {
   int index = 0;
-
   List<HomeModel> laptop = [
     HomeModel(
         name: "Asus",
@@ -72,7 +65,10 @@ class _homescreenState extends State<homescreen> {
               radius: 50,
             ),
             const SizedBox(height: 20.0, width: 20.0),
-            Text(widget.userName!),
+            const Text(
+              "Thasleema",
+              style: TextStyle(color: Colors.white),
+            ),
             const Divider(
               thickness: 2,
             ),

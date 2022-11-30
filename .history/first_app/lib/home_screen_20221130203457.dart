@@ -72,7 +72,7 @@ class _homescreenState extends State<homescreen> {
               radius: 50,
             ),
             const SizedBox(height: 20.0, width: 20.0),
-            Text(widget.userName!),
+            Text(widget.username!),
             const Divider(
               thickness: 2,
             ),

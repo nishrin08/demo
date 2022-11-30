@@ -3,8 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form_builder/flutter_form_builder.dart';
 import 'package:form_builder_validators/form_builder_validators.dart';
 
-import '../home_screen.dart';
-
 class FormBuilderScreen extends StatefulWidget {
   const FormBuilderScreen({super.key});
 
@@ -103,10 +101,10 @@ class _FormBuilderScreenState extends State<FormBuilderScreen> {
                         Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => homescreen(
-                                      userName: userName!,
+                                builder: (context) => HomeScreen(
+                                      username: userName!,
                                       password: password!,
-                                      genderSelected: genderSelected!,
+                                      gender: genderSelected!,
                                     )));
                         formKey.currentState!.fields['User Name']!.reset();
                         formKey.currentState!.fields['Password']!.reset();

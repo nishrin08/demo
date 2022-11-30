@@ -4,15 +4,11 @@ import 'models/home_model.dart';
 
 // ignore: camel_case_types
 class homescreen extends StatefulWidget {
-  String? userName;
-  String? password;
-  String? genderSelected;
-  homescreen(
-      {super.key,
-      required this.userName,
-      required this.password,
-      required this.genderSelected});
-
+  const homescreen({super.key});
+  Homescreen({this.username,
+  required this.password,required this.gender,});
+    
+  
   @override
   State<homescreen> createState() => _homescreenState();
 }
@@ -20,8 +16,9 @@ class homescreen extends StatefulWidget {
 // ignore: camel_case_types
 class _homescreenState extends State<homescreen> {
   int index = 0;
-
-  List<HomeModel> laptop = [
+  String? userName;
+  String? password;
+  String? genderSelected;
     HomeModel(
         name: "Asus",
         image: const AssetImage("assets/1.jpeg"),
@@ -72,7 +69,10 @@ class _homescreenState extends State<homescreen> {
               radius: 50,
             ),
             const SizedBox(height: 20.0, width: 20.0),
-            Text(widget.userName!),
+            const Text(
+              "Thasleema",
+              style: TextStyle(color: Colors.white),
+            ),
             const Divider(
               thickness: 2,
             ),

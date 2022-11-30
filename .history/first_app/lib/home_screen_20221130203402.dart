@@ -9,9 +9,9 @@ class homescreen extends StatefulWidget {
   String? genderSelected;
   homescreen(
       {super.key,
-      required this.userName,
-      required this.password,
-      required this.genderSelected});
+      required String username,
+      required String password,
+      required String gender});
 
   @override
   State<homescreen> createState() => _homescreenState();
@@ -72,7 +72,7 @@ class _homescreenState extends State<homescreen> {
               radius: 50,
             ),
             const SizedBox(height: 20.0, width: 20.0),
-            Text(widget.userName!),
+            const Text(widget.username!),
             const Divider(
               thickness: 2,
             ),
